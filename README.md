@@ -36,8 +36,11 @@ npm run startdev
 
 
 ## :file_folder: Resources
-- De Vries, D. (2020, January 1). Express server example. Consulted from https://google.com/
-Credit to [@dandevri]() && [@dandevri]() && [@dandevri]()
+Credits to [Danny de Vries](https://github.com/dandevri) && [Laurens Aarnoudse](https://github.com/Razpudding) && [Robert Spier](https://github.com/roberrrt-s) for giving interesting lectures about Functional Programming and how to deal with it.
+
+- De Boer, D. (2020, January 1). Google example. Consulted from https://google.com/
+
+
 
 ## Data  
 ### API
