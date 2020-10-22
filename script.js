@@ -14,23 +14,16 @@ function getAnswersForQuestion(answers, question) {
 const uniqueAnswers = myData.map((answer) => answer[kolomNaam]);
 // console.log("2-Unique answers are:", uniqueAnswers)
 
-// Filter 'naamAnderGeslacht' in 2 parts-> 'With nane' && 'Wihout name'
-let anderGeslachtNaam = 'naamAnderGeslacht';
-let welOfGeenNaam = myData.map((name) => name[anderGeslachtNaam]);
-// console.log('Alle namen zijn', welOfGeenNaam);
 
-// Er zijn "-", "", "/", "nvt", "Zou het niet weten" etc.
-// Checks if all names are real and correct names
-for (answer in myData) {
-	if (
-		myData[answer].naamAnderGeslacht === '' ||
-		myData[answer].naamAnderGeslacht === '-' ||
-		myData[answer].naamAnderGeslacht === 'nvt' ||
-		myData[answer].naamAnderGeslacht === 'Zou het niet weten' ||
-		myData[answer].naamAnderGeslacht === '/'
-	) {
-		console.log('INCORRECT - Geen antwoord');
-	} else {
-		console.log('CORRECT - Een naam');
-	}
-}
+// ****************************************************************************************************
+
+// Filter 'naamAnderGeslacht' in 1 new filtered Array (without incorrect answers)
+let anderGeslachtNaam = 'naamAnderGeslacht';
+let allNames = myData.map((name) => name[anderGeslachtNaam]); // Makes new Array, of all names
+console.log('Alle namen zijn', allNames); // List of ALL names
+
+// This function gives a filtered list of names 
+let filteredNames = allNames.filter(function (name) {
+	return name != '-' && name != '/' && name != '' && name != 'geen' && name != 'nvt' && name.indexOf(' ') < 1; // https://stackoverflow.com/q/17616624 - Checks if there are 1 or more whitespaces
+});
+console.log('Gefilterde namen zijn', filteredNames); // List of FILTERED names
