@@ -14,16 +14,21 @@ function getAnswersForQuestion(answers, question) {
 const uniqueAnswers = myData.map((answer) => answer[kolomNaam]);
 // console.log("2-Unique answers are:", uniqueAnswers)
 
-
 // ****************************************************************************************************
 
-// Filter 'naamAnderGeslacht' in 1 new filtered Array (without incorrect answers)
+// Filter 'naamAnderGeslacht' in 1 new Array (incorrect answers replaced with 'null')
 let anderGeslachtNaam = 'naamAnderGeslacht';
 let allNames = myData.map((name) => name[anderGeslachtNaam]); // Makes new Array, of all names
 console.log('Alle namen zijn', allNames); // List of ALL names
 
-// This function gives a filtered list of names 
-let filteredNames = allNames.filter(function (name) {
-	return name != '-' && name != '/' && name != '' && name != 'geen' && name != 'nvt' && name.indexOf(' ') < 1; // https://stackoverflow.com/q/17616624 - Checks if there are 1 or more whitespaces
+// Makes new Array with replaced answers
+let checkedNames = allNames.map(function (name) {
+	return name == '-' ? null :
+		   name == '/' ? null :
+		   name == '' ? null :
+		   name == 'geen' ? null :
+		   name == 'nvt' ? null :
+		   name.indexOf(' ') > 0 ? null :
+		   name;
 });
-console.log('Gefilterde namen zijn', filteredNames); // List of FILTERED names
+console.log('Gecorrigeerde lijst is', checkedNames); // List of ALL names with 'null' mentioning
