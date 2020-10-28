@@ -1,11 +1,13 @@
 ## Functional Programming 20-21
-# TitleOfProject
+# titleProject
 [imageOfProduct]
 [linkOfDeployment_Netlify]
 
 
-## :heart: Concept
-Whats the purpose, what does my app do?
+## Onderzoeksvragen
+_Wat is de ideale plek in de stad om te wonen als bestuurder van een elektrische auto?_
+
+👉 Lees [hier](https://github.com/ralfz123/functional-programming/wiki/Onderzoek-%F0%9F%94%8D) meer over mijn onderzoek
 
 ## :heart_eyes: Features
 - xxx
@@ -14,8 +16,8 @@ Whats the purpose, what does my app do?
 
 ## :nerd_face: Technical summary
 **[nameOfApp]**  is built, using:
-- xxx
-- xxx
+- D3
+- [Functional Programming Patterns](https://github.com/ralfz123/functional-programming/wiki/Functional-Patterns)
 - ...
 
 ## :gear: Install
@@ -38,8 +40,7 @@ npm run startdev
 ## :file_folder: Resources
 Credits to [Danny de Vries](https://github.com/dandevri) && [Laurens Aarnoudse](https://github.com/Razpudding) && [Robert Spier](https://github.com/roberrrt-s) for giving interesting lectures about Functional Programming and how to deal with it.
 
-- De Boer, D. (2020, January 1). Google example. Consulted from https://google.com/
-
+- Aarnoudse, L.  (2020, October 28). Rubric. Consulted from https://github.com/cmda-tt/course-20-21
 
 
 ## Data  
