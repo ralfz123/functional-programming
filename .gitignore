@@ -3,4 +3,4 @@ node_modules/
 *.csv, 
 *.json
 survey_dv.js
-functional-programming.wiki
+.wiki
