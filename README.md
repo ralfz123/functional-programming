@@ -14,7 +14,7 @@ In this project, I take an interesting research question and research it complet
 ##### What is the ideal place in the city to live as a driver of an electric car?
 
 #### Sub questions
-1. Are the parking areas busy?
+1. When is it busy in the parking areas (in parking lots / in parking garages)?
    _My assumption is that it can be very busy, especially on holidays and weekends._
 2. Is it busier in the evening than during the day in the parking areas?
     _My assumption is that there is a certain balance in terms of activity between daytime and evening. People work during the day (now mainly at home #corona) and most people are at home in the evening._
