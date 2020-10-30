@@ -1,17 +1,34 @@
-## Functional Programming 20-21
+##### Functional Programming 20-21
 # The car in the city
-###### Data visualization
 <!-- [_imageOfProduct_] -->
 <!-- [_linkOfDeployment_Netlify_] -->
+_Functional Programming, a course of the Tech-track of Information Design. It is a thema semester of the third year from the study [CMD](https://www.cmd-amsterdam.nl/). In this course I will learn to clean raw data, transform the data and apply it in a datavisualization._
 
 ## :rocket: Purpose of Project
 Commissioned by de Volkskrant, I have to look for an interesting angle on 'The car in the city'. This allows me to help the editorial staff of de Volkskrant to write interesting and new articles.
-In this project, I take a research question and research it completely. I am going to look at what data is available in the [RDW datasets](https://opendata.rdw.nl/browse?category=Parkeren&provenance=official&page=1) that we have received. I will also clean up this data and transform it into usable data. With this data and the research question (which I want to answer) I will make a data visualization using D3.
+In this project, I take an interesting research question and research it completely. I am going to look at what data is available in the [RDW datasets](https://opendata.rdw.nl/browse?category=Parkeren&provenance=official&page=1) that we have received. I will also clean up this data and transform it into usable data. With this data and the research question (which I want to answer) I will make a data visualization using [D3](https://d3js.org/).
 
 
 ## :heart_eyes: Concept
 ### Research Question
->What is the ideal place in the city to live as a driver of an electric car?
+##### What is the ideal place in the city to live as a driver of an electric car?
+
+#### Sub questions
+1. Are the parking areas busy?
+   _My assumption is that it can be very busy, especially on holidays and weekends._
+2. Is it busier in the evening than during the day in the parking areas?
+    _My assumption is that there is a certain balance in terms of activity between daytime and evening. People work during the day (now mainly at home #corona) and most people are at home in the evening._
+3. Is it possible to reserve a parking space?
+    _My assumption is that there are subscriptions to parking areas and that you therefore have priority to park somewhere._
+4. Is there a maximum time that you can park in a parking space (parking times in connection with the car charged)?
+    _My assumption is that you can park in a parking area indefinitely, but that there are opening and closing times for a parking area._
+5. Why are there not several electric charging points at parking places (outside the center)?
+    _My assumption is that there is not enough enthusiasm for that (because not many people have an electric car yet) ._
+6. Why are there only electric cars allowed in such a parking lot?
+    _My assumption is that there are parking areas that are only intended for electric cars._
+7. How expensive is it for electric cars to park?
+    _My assumption is that parking is the same for both electric cars and normal cars. By the way, this depends on where you park._
+
 ### Idea
 I want to make a data visualization, using D3, to show the reader how 'ideal' the life is of an electric car driver who lives in the city while still having to charge his / her car.
 
