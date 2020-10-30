@@ -1,13 +1,21 @@
 ## Functional Programming 20-21
-# _titleProject_
-[_imageOfProduct_]
-[_linkOfDeployment_Netlify_]
+# The car in the city
+###### Data visualization
+<!-- [_imageOfProduct_] -->
+<!-- [_linkOfDeployment_Netlify_] -->
+
+## :rocket: Purpose of Project
+Commissioned by de Volkskrant, I have to look for an interesting angle on 'The car in the city'. This allows me to help the editorial staff of de Volkskrant to write interesting and new articles.
+In this project, I take a research question and research it completely. I am going to look at what data is available in the [RDW datasets](https://opendata.rdw.nl/browse?category=Parkeren&provenance=official&page=1) that we have received. I will also clean up this data and transform it into usable data. With this data and the research question (which I want to answer) I will make a data visualization using D3.
+
 
 ## :heart_eyes: Concept
 ### Research Question
 >What is the ideal place in the city to live as a driver of an electric car?
 ### Idea
-I want to make a data visualization, using D3, to show the reader how 'ideal' the life is of an electric car driver who lives in the city while still having to charge his / her car
+I want to make a data visualization, using D3, to show the reader how 'ideal' the life is of an electric car driver who lives in the city while still having to charge his / her car.
+
+<img src="https://raw.githubusercontent.com/wiki/ralfz123/functional-programming/img/sketch_v1.jpg" alt="first-sketch" width="600px">
 
 ## Data  
 I think I can use [this data](https://github.com/ralfz123/functional-programming/wiki/Onderzoek-%F0%9F%94%8D#data) for my subject.
