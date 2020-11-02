@@ -11,7 +11,8 @@ In this project, I take an interesting research question and research it complet
 
 ## :heart_eyes: Concept
 ### Research Question
-##### What is the ideal place in the city to live as a driver of an electric car?
+**What is the ideal place in the city to live as a driver of an electric car?**
+_My assumption is that it will be very difficult for drivers of electric cars in the city. I think if you live more in the center, then you have more parking areas with charging points than you live further away from the center._
 
 #### Sub questions
 1. When is it busy in the parking areas (in parking lots / in parking garages)?
@@ -29,12 +30,12 @@ In this project, I take an interesting research question and research it complet
 7. How expensive is it for electric cars to park?
     _My assumption is that parking is the same for both electric cars and normal cars. By the way, this depends on where you park._
 
-### Idea
+### :bulb: Idea
 I want to make a data visualization, using D3, to show the reader how 'ideal' the life is of an electric car driver who lives in the city while still having to charge his / her car.
 
 <img src="https://raw.githubusercontent.com/wiki/ralfz123/functional-programming/img/sketch_v1.jpg" alt="first-sketch" width="600px">
 
-## Data  
+## :1234: Data  
 I think I can use [this data](https://github.com/ralfz123/functional-programming/wiki/Onderzoek-%F0%9F%94%8D#data) for my subject.
 The data variables I think I can use, are:
 - `AreaId` - [this](https://opendata.rdw.nl/Parkeren/Open-Data-Parkeren-GEBIED/adw6-9hsg) or [this](https://opendata.rdw.nl/Parkeren/Open-Data-Parkeren-GEOMETRIE-GEBIED/nsk3-v9n7)
@@ -58,14 +59,11 @@ The data variables I think I can use, are:
 ```
 
 
-### Data cleaning
-_Here comes the code I've used to clean up the data_
-
 ## :nerd_face: Technical summary
-**[nameOfApp]**  is built, using:
+This data visualization will be built, using:
+- JavaScript
 - D3
 - [Functional Programming Patterns](https://github.com/ralfz123/functional-programming/wiki/Functional-Patterns)
-- ...
 
 ## :gear: Install
 1. Clone the repository:  
@@ -80,7 +78,12 @@ npm install
 
 3. To run the app   
 ```
-npm run startdev
+python -m SimpleHTTPServer 8000  
+```
+
+4. Go to [localhost](http://localhost:8000/) in the browser
+```
+http://localhost:8000/
 ```
 
 
