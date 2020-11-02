@@ -11,7 +11,7 @@ In this project, I take an interesting research question and research it complet
 
 ## :heart_eyes: Concept
 ### Research Question
-**What is the ideal place in the city to live as a driver of an electric car?**
+**What is the ideal place in the city to live as a driver of an electric car?**  
 _My assumption is that it will be very difficult for drivers of electric cars in the city. I think if you live more in the center, then you have more parking areas with charging points than you live further away from the center._
 
 #### Sub questions
