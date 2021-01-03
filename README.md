@@ -1,7 +1,5 @@
 ##### Functional Programming 20-21
 # The car in the city
-<!-- [_imageOfProduct_] -->
-<!-- [_linkOfDeployment_Netlify_] -->
 _Functional Programming, a course of the Tech-track of Information Design. It is a thema semester of the third year from the study [CMD](https://www.cmd-amsterdam.nl/). In this course I will learn to clean raw data, transform the data and apply it in a datavisualization._
 
 ## :rocket: Purpose of Project
