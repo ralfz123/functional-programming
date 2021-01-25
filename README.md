@@ -91,4 +91,5 @@ Credits to [Danny de Vries](https://github.com/dandevri) && [Laurens Aarnoudse](
 - Aarnoudse, L.  (2020, October 28). Rubric. Consulted from https://github.com/cmda-tt/course-20-21
 
 ## :cop: License
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 This project from [Ralf](https://github.com/ralfz123) has a [MIT © License](https://github.com/ralfz123/functional-programming/blob/main/LICENSE)
