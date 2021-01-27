@@ -61,7 +61,7 @@ let capitalizeNames = checkedNames.map((name) => {
 
 // Combine data keys 'tijdreisJaar' & 'waaromTijdreizenNaarJaar' and nest them in a self-made data key `tijdreis`. It also replaces empty values with `null`
 let nestedData = nestDataKeys(myData);
-// console.log('Nested data:', nestedData);
+console.log('Nested data:', nestedData);
 
 function nestDataKeys(data) {
   const dataObject = data.map((element) => {
@@ -70,6 +70,7 @@ function nestDataKeys(data) {
       element.waaromTijdreizenNaarJaar === ''
     ) {
       element.tijdreisJaar = null;
+      element.waaromTijdreizenNaarJaar = null;
     }
 
     return {
