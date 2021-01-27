@@ -57,60 +57,46 @@ let capitalizeNames = checkedNames.map((name) => {
 
 // ----------------------------------------------------------------------------------------
 
-// Transform data
-let key = 'tijdreisJaar';
-let allDates = myData.map(function (value) {
-  let day = value[key];
-  return day;
-});
+// Transform data / Nest in new (selfmade) datakey
 
-// console.log('Dates', allDates); // List of ALL dates
+// Filter 'tijdreisJaar' in 1 new Array
+// let keyOne = 'tijdreisJaar';
+// let keyTwo = 'waaromTijdreizenNaarJaar';
+// let combinedData = myData.map((value) => {
+//   	let answerDay = value[keyOne];
+//     let answerWhy = value[keyTwo];
+//     return [answerDay , answerWhy];
+// });
 
-// Step 1 - transform to another form of writing the date and filters out the incorrect date
-let checkedDate = allDates.map(function (value) {
-  // Method 1
+// console.log('Combined data =', combinedData); // List of ALL dates
 
-  // return value == ''
-  // 	? null
-  // 	: value == '-'
-  // 	? null
-  // 	: value == '/'
-  // 	? null
-  // 	: value;
+// Combine with data key 'waaromTijdreizenNaarJaar' and nest in new self-created data key `tijdreis` and corrects the values
+// Only nesting works, replacing from / to - does not work yet.
+let nestedData = nestDataKeys(myData);
+console.log('Nested data:', nestedData);
 
-  // Method 2
-  // let transformPunctuation = value.replaceAll('-', '/');
-  // return transformPunctuation
+function nestDataKeys(data) {
+  const dataObject = data.map((element) => {
+    if (
+      element.tijdreisJaar === '' ||
+      element.waaromTijdreizenNaarJaar === ''
+    ) {
+      element.tijdreisJaar = null;
+    }
 
-  // Method that adds a zero before date and month if it's needed.
+    if (element.tijdreisJaar === '/') {
+      console.log('bevat een /');
+      element.tijdreisJaar === '-';
+      //   element.tijdreisJaar.replaceAll('/', 'xxx');
+    }
 
-  // Method 3
-  let validDate =
-    value.substr(3, 2) + '/' + value.substr(0, 2) + '/' + value.substr(6, 4);
+    return {
+      tijdreis: {
+        tijdreisJaar: element.tijdreisJaar,
+        waaromTijdreizenNaarJaar: element.waaromTijdreizenNaarJaar,
+      },
+    };
+  });
 
-  return validDate == '//' ? null : validDate;
-});
-
-// console.log('Checked dates', checkedDate); // List of checked dates
-
-// Step 2 - transform to string object
-let stringifyDate = checkedDate.map(function (value) {
-  let stringDate = new Date(value).toDateString();
-  return stringDate;
-});
-
-// console.log('Stringified Dates', stringifyDate); // List of stringified dates
-
-// Method thats swaps month and date
-// var MyDate = new Date('1-12-2033');
-// var MyDateString;
-
-// MyDate.setDate(MyDate.getDate());
-
-// MyDateString =
-// ('0' + (MyDate.getMonth() + 1)) .slice(-2) 	+	'/' +
-// ('0' + MyDate.getDate()) .slice(-2) 		+ 	'/' +
-// 	MyDate.getFullYear();
-
-// console.log(MyDateString);
-// console.log(MyDate.toDateString());
+  return dataObject;
+}
