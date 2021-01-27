@@ -57,23 +57,11 @@ let capitalizeNames = checkedNames.map((name) => {
 
 // ----------------------------------------------------------------------------------------
 
-// Transform data / Nest in new (selfmade) datakey
+// Transform data | Nest 2 data keys in 1 (selfmade) datakey
 
-// Filter 'tijdreisJaar' in 1 new Array
-// let keyOne = 'tijdreisJaar';
-// let keyTwo = 'waaromTijdreizenNaarJaar';
-// let combinedData = myData.map((value) => {
-//   	let answerDay = value[keyOne];
-//     let answerWhy = value[keyTwo];
-//     return [answerDay , answerWhy];
-// });
-
-// console.log('Combined data =', combinedData); // List of ALL dates
-
-// Combine with data key 'waaromTijdreizenNaarJaar' and nest in new self-created data key `tijdreis` and corrects the values
-// Only nesting works, replacing from / to - does not work yet.
+// Combine data keys 'tijdreisJaar' & 'waaromTijdreizenNaarJaar' and nest them in a self-made data key `tijdreis`. It also replaces empty values with `null`
 let nestedData = nestDataKeys(myData);
-console.log('Nested data:', nestedData);
+// console.log('Nested data:', nestedData);
 
 function nestDataKeys(data) {
   const dataObject = data.map((element) => {
@@ -82,12 +70,6 @@ function nestDataKeys(data) {
       element.waaromTijdreizenNaarJaar === ''
     ) {
       element.tijdreisJaar = null;
-    }
-
-    if (element.tijdreisJaar === '/') {
-      console.log('bevat een /');
-      element.tijdreisJaar === '-';
-      //   element.tijdreisJaar.replaceAll('/', 'xxx');
     }
 
     return {
