@@ -19,41 +19,58 @@ let allNames = myData.map((name) => name[anderGeslachtNaam]); // Makes new Array
 // console.log('(1) Namenlijst', allNames); // List of ALL names
 
 // ------ SECOND STEP (A) | NULL - Makes new Array with incorrect answers are replaced with 'null'
-let checkedNames = allNames.map((name) => {
-  if (
-    name == '-' ||
-    name == '/' ||
-    name == '' ||
-    name == 'geen' ||
-    name == 'nvt' ||
-    name.indexOf(' ') > 0
-  ) {
-    return null;
-  }
-  return name;
-});
-// console.log('(2A) Gecorrigeerde namenlijst', checkedNames); // List of ALL names, with 'null' mentioning
+
+checkTheNames(allNames); //Invoking the function
+// console.log('(2A) Gecorrigeerde namenlijst', checkTheNames(allNames)); // List of ALL names, with 'null' mentioning
+
+function checkTheNames(data) {
+  let checkedNames = data.map((name) => {
+    if (
+      name == '-' ||
+      name == '/' ||
+      name == '' ||
+      name == 'geen' ||
+      name == 'nvt' ||
+      name.indexOf(' ') > 0
+    ) {
+      return null;
+    }
+    return name;
+  });
+  capitalizeTheNames(checkedNames); // Invoking the function
+  // console.log('(3) Namenlijst met hoofdletter', capitalizeTheNames(checkedNames)); // List of ALL names, with uppercased first letter
+
+  return checkedNames;
+}
 
 // ------ SECOND STEP (B) | FILTER - Filter 'naamAnderGeslacht' in 1 new filtered Array (without incorrect answers)
 // Filters out a list of incorrect answers
-let filteredNames = allNames.filter((name) => {
-  return (
-    name != '-' &&
-    name != '/' &&
-    name != '' &&
-    name != 'geen' &&
-    name != 'nvt' &&
-    name.indexOf(' ') < 1 // https://stackoverflow.com/q/17616624 - Checks if there are 1 or more whitespaces
-  );
-});
-// console.log('(2B) Namenlijst gefilterd (zonder incorrecte antwoorden)', filteredNames); // List of FILTERED names
+
+filterTheNames(allNames); //Invoking the function
+// console.log('(2B) Namenlijst gefilterd (zonder incorrecte antwoorden)', filterTheNames(allNames)); // List of FILTERED names
+
+function filterTheNames(data) {
+  let filteredNames = data.filter((name) => {
+    return (
+      name != '-' &&
+      name != '/' &&
+      name != '' &&
+      name != 'geen' &&
+      name != 'nvt' &&
+      name.indexOf(' ') < 1 // https://stackoverflow.com/q/17616624 - Checks if there are 1 or more whitespaces
+    );
+  });
+  return filteredNames;
+}
 
 // ------ THIRD STEP - Convert first letter of names to Uppercase
-let capitalizeNames = checkedNames.map((name) => {
-  return name != null ? name.charAt(0).toUpperCase() + name.slice(1) : name;
-});
 
-// console.log('(3) Namenlijst met hoofdletter', capitalizeNames); // List of ALL names, with uppercased first letter
+function capitalizeTheNames(data) {
+  let capitalizedNames = data.map((name) => {
+    return name != null ? name.charAt(0).toUpperCase() + name.slice(1) : name;
+  });
+  return capitalizedNames;
+}
 
 // ----------------------------------------------------------------------------------------
 
